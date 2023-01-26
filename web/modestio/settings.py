@@ -59,7 +59,7 @@ ROOT_URLCONF = 'modestio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/yana/code/modestio/web/templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,8 +71,6 @@ TEMPLATES = [
         },
     },
 ]
-
-#TEMPLATE_DIRS = ['/home/yana/code/modestio/web/templates']
 
 WSGI_APPLICATION = 'modestio.wsgi.application'
 
