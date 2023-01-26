@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-#Cats
+
 class Cat(models.Model):
     SEX_CHOICES = [('m','male'), ('f','female')]
     
@@ -11,8 +11,11 @@ class Cat(models.Model):
     age = models.IntegerField()    
     sex = models.CharField(max_length=6, choices=SEX_CHOICES)
     health_status = models.CharField(max_length=100)
-
+    
     def __str__(self):
         return self.name
 
-        
+
+class Photo(models.Model):
+    cat = models.ForeignKey(Cat, on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField()
