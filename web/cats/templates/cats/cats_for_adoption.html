@@ -1,0 +1,13 @@
+<h1>Cats for adoption<h1/>
+{% if available_cats %}
+    <ul>
+    {% for cat in available_cats %}
+        <li>
+            <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a><br/>
+            {{ cat.approximate_date_of_birth }}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Currently there aren't cats for adoption.</p>
+{% endif %}
