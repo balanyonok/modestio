@@ -1,9 +1,11 @@
 {% block content %}
   <h1>{{ cat.name }}</h1>
 
-  <p><strong>Age:</strong> {{ cat.name }}</p>
+  <p><strong>Age:</strong> {{ cat.calculate_age }}</p>
   <p><strong>Sex:</strong> {{ cat.sex }}</p>
   <p><strong>Health:</strong> {{ cat.health_status }}</p>
+  <img src="/media/cats/photos/{{ cat.name }}_1.jpg"/>
+  <img src="/media/cats/photos/{{ cat.name }}_2.jpg"/>
+  <img src="/media/cats/photos/{{ cat.name }}_3.jpg"/>
 
-  {% endblock %}
-
+{% endblock %}

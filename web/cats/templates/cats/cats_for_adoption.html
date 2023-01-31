@@ -1,10 +1,11 @@
-<h1>Cats for adoption<h1/>
+<h1>Cats for adoption</h1>
 {% if available_cats %}
     <ul>
     {% for cat in available_cats %}
         <li>
-            <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a><br/>
-            {{ cat.approximate_date_of_birth }}
+            <a href="{{ cat.get_absolute_url }}"><h2>{{ cat.name }}</a> ({{ cat.calculate_age }})</h2><br/>
+            
+            <img src="/media/cats/photos/{{ cat.name }}_1.jpg"/>
         </li>
     {% endfor %}
     </ul>
