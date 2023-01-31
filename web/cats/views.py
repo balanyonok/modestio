@@ -24,8 +24,4 @@ class CatProfileView(generic.DetailView):
     model = Cat
     template_name = 'cats/cat_profile.html'
 
-    def view_cat_profile(request, primary_key):
-        cat_profile = get_object_or_404(Cat, pk=primary_key)
-        return render(request, template_name, context={'cat': cat_profile})
-
     
