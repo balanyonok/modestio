@@ -4,8 +4,12 @@
   <p><strong>Age:</strong> {{ cat.calculate_age }}</p>
   <p><strong>Sex:</strong> {{ cat.get_sex_display }}</p>
   <p><strong>Health:</strong> {{ cat.health_status }}</p>
-  <img src="/media/cats/photos/{{ cat.name }}_1.jpg"/>
-  <img src="/media/cats/photos/{{ cat.name }}_2.jpg"/>
-  <img src="/media/cats/photos/{{ cat.name }}_3.jpg"/>
+  <ul>
+  {% for photo in cat.images.all %}
+    <li>
+    <img src="{{ MEDIA_URL }} {{ photo.image.url }}"/>
+    </li>
+  {% endfor %}
+  </ul>
 
 {% endblock %}
