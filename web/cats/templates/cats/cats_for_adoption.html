@@ -5,7 +5,7 @@
         <li>
             <a href="{{ cat.get_absolute_url }}"><h2>{{ cat.name }}</a> ({{ cat.calculate_age }})</h2><br/>
             {% with cat.images.first as photo %}
-            <img src="{{ MEDIA_URL }} {{ photo.image.url }}"/>
+            <img src="{{ photo.image.url }}"/>
             {% endwith %}
         </li>
     {% endfor %}

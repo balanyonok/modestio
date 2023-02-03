@@ -7,7 +7,7 @@
   <ul>
   {% for photo in cat.images.all %}
     <li>
-    <img src="{{ MEDIA_URL }} {{ photo.image.url }}"/>
+    <img src="{{ photo.image.url }}"/>
     </li>
   {% endfor %}
   </ul>
