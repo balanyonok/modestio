@@ -23,5 +23,3 @@ class CatProfileView(generic.DetailView):
     """
     model = Cat
     template_name = 'cats/cat_profile.html'
-
-    
