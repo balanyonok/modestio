@@ -2,10 +2,11 @@ FROM python:3
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
+COPY web/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+EXPOSE 8000
 
-CMD [ "python", "./manage.py runserver" ]
+CMD [ "python", "web/manage.py", "runserver" ]
