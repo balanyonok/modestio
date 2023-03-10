@@ -41,7 +41,7 @@ postgres:latest
 To build the Django image from Dockerfile:
 
 ```
- docker build -t modestio:2023-03-10 .
+docker build -t modestio:2023-03-10 .
 ```
 
 And then run it as a container:
