@@ -38,11 +38,11 @@ docker run --name modestio-postgres --network modestio-network \
 postgres:latest
 ```
 
-To build a django image from Dockerfile:
+To build the Django image from Dockerfile:
 
- ```
+```
  docker build -t modestio .
- ```
+```
 
 And then run it as a container:
 
