@@ -1,0 +1,30 @@
+services:
+  modestio-app:
+    #image: modestio
+    build: .
+    #command: sh -c "sleep 5s && python web/manage.py runserver 0.0.0.0:8000"
+    #command: python web/manage.py runserver 0.0.0.0:8000
+    networks:
+      - modestio-network
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/usr/src/app
+    environment:
+      DATABASE_HOST: db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    networks:
+      - modestio-network
+    ports:
+      - 5432:5432
+    volumes:
+      - ./web/postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: mypassword
+
+networks:
+  modestio-network:
