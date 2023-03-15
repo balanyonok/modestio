@@ -21,13 +21,10 @@ from . import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('cats/', include('cats.urls')),
-    path('pages/', include('django.contrib.flatpages.urls')),
+    path("admin/", admin.site.urls),
+    path("cats/", include("cats.urls")),
+    path("pages/", include("django.contrib.flatpages.urls")),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT
-    )
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
