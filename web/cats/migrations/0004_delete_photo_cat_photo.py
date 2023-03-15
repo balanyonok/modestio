@@ -4,18 +4,17 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('cats', '0003_photo'),
+        ("cats", "0003_photo"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='Photo',
+            name="Photo",
         ),
         migrations.AddField(
-            model_name='cat',
-            name='photo',
-            field=models.ImageField(null=True, upload_to='photo/'),
+            model_name="cat",
+            name="photo",
+            field=models.ImageField(null=True, upload_to="photo/"),
         ),
     ]
