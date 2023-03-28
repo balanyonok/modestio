@@ -32,7 +32,7 @@ Potentially convertible into a single-page app in React with RESTful API.
 
 * First option is to run both postgres image and Django image as containers manually.
 
-Run a postgres image as a container first (from root directory) using the command:
+Run a postgres image as a container first (from project's root directory) using the command:
 
 ```
 docker run --name modestio-postgres --network modestio-network \
