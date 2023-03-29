@@ -9,8 +9,8 @@ services:
       - 8000:8000
     volumes:
       - .:/usr/src/app
-    environment:
-      DATABASE_HOST: db
+    env_file:
+      - env_variables.txt
     depends_on:
       - db
 
@@ -22,8 +22,8 @@ services:
       - 5432:5432
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: mypassword
+    env_file:
+      - env_variables.txt
 
 networks:
   modestio-network:
