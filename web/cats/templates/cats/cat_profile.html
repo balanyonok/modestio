@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="style" href="{% static 'cats/cat_profile_style.css' %}">
+
 {% block content %}
   <h1>{{ cat.name }}</h1>
 
@@ -7,7 +10,8 @@
   <ul>
   {% for photo in cat.images.all %}
     <li>
-    <img src="{{ photo.image.url }}"/>
+      <div class="wrapper">
+      <div class="box"><img src="{{ photo.image.url }}" class="cover"></div>
     </li>
   {% endfor %}
   </ul>
