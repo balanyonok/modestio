@@ -48,6 +48,6 @@ And then run it as a container:
 
 ```
 docker run --network modestio-network --publish 8000:8000 \
- --env DATABASE_HOST=db --volume .:/usr/src/app\
+ --env DATABASE_HOST=db --volume .:/usr/src/app \
 modestio:2023-03-10
 ```
