@@ -26,6 +26,18 @@ Potentially convertible into a single-page app in React with RESTful API.
 * merging: only via code reviews (doesn’t matter who merges)
 * language: English
 
+## Development: How To Install [pre-commit](https://pre-commit.com) and its hooks:
+
+```
+$ pip install pre-commit
+$ pre-commit install
+```
+Install `tox` and run it:
+
+```
+$ tox
+```
+
 ## Usage
 
 To run a postgres image as a container (from modestio/web directory) use the command:
