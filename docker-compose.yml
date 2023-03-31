@@ -1,7 +1,6 @@
 services:
 
   modestio-app:
-    #image: modestio
     build: .
     networks:
       - modestio-network
@@ -24,6 +23,3 @@ services:
       - ./postgres_data:/var/lib/postgresql/data
     env_file:
       - env_variables.txt
-
-networks:
-  modestio-network:
