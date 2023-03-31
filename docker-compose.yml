@@ -1,0 +1,25 @@
+services:
+
+  modestio-app:
+    build: .
+    networks:
+      - modestio-network
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - env_variables.txt
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    networks:
+      - modestio-network
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    env_file:
+      - env_variables.txt
