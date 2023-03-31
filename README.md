@@ -40,7 +40,13 @@ $ tox
 
 ## Usage
 
-To run a postgres image as a container (from modestio/web directory) use the command:
+Be sure you have modestio repository copied to your machine.
+
+### Using docker command line
+
+First option is to run both postgres image and Django image as containers manually.
+
+* Run a postgres image as a container first (from project's root directory) using the command:
 
 ```
 docker run --name modestio-postgres --network modestio-network \
@@ -50,16 +56,24 @@ docker run --name modestio-postgres --network modestio-network \
 postgres:latest
 ```
 
-To build the Django image from Dockerfile:
+* Then build the Django image from Dockerfile:
 
 ```
 docker build -t modestio:2023-03-10 .
 ```
 
-And then run it as a container:
+* And run it as a container:
 
 ```
 docker run --network modestio-network --publish 8000:8000 \
  --env DATABASE_HOST=db --volume .:/usr/src/app \
 modestio:2023-03-10
+```
+
+### Using docker-compose file
+
+It's more handy to use a docker-compose file. The only thing you need is to run the command:
+
+```
+docker compose up
 ```
