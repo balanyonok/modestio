@@ -2,8 +2,6 @@ services:
 
   modestio-app:
     build: .
-    networks:
-      - modestio-network
     ports:
       - 8000:8000
     volumes:
@@ -15,8 +13,6 @@ services:
 
   db:
     image: postgres:latest
-    networks:
-      - modestio-network
     ports:
       - 5432:5432
     volumes:
