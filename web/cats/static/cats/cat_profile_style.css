@@ -9,7 +9,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 text-align: center;
 }
 
-.img-grid {
+.image-grid {
   --gap: 16px;
   --num-cols:4;
   --rows-height: 300px;
