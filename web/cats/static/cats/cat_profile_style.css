@@ -1,17 +1,54 @@
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Style for a header*/
+header {
+  position: fixed;
+  top:0; left:0; right:0;
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  background-color: white;
+}
+
+header .navbar a {
+  font-size: 1.4rem;
+  color: black;
+  background-color: beige;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+header .navbar a:hover {
+  color: red;
+
+}
+
+header .logo {
+  position: fixed;
+  margin-top: 35px;
+}
+
+header .logo > img {
+  width: 40%;
+  height: 40%;
+}
+
+/*Style for a page content: cat info and images*/
 h1 {
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 text-align: center;
-color: blue;
+color: black;
+margin-top: 300px;
 }
 
 p {
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 text-align: center;
 }
 
 .image-grid {
   --gap: 16px;
-  --num-cols:4;
+  --num-cols: 4;
   --rows-height: 300px;
 
   box-sizing: border-box;
@@ -21,10 +58,19 @@ text-align: center;
   grid-template-columns: repeat(var(--num-cols), 1fr);
   grid-auto-rows: var(--row-height);
   gap: var(--gap);
+  margin: 0 10% 0;
 }
 
 .image-grid > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 30%;
+  }
+
 }
