@@ -4,8 +4,8 @@
 
 /*Style for a header*/
 header {
-  position: fixed;
-  top:0; left:0; right:0;
+  position: sticky;
+  top:0px;
   text-align: center;
   justify-content: space-around;
   display: flex;
@@ -26,7 +26,6 @@ header .navbar a:hover {
 }
 
 header .logo {
-  position: fixed;
   margin-top: 35px;
 }
 
@@ -50,10 +49,8 @@ text-align: center;
   --gap: 16px;
   --num-cols: 4;
   --rows-height: 300px;
-
   box-sizing: border-box;
   padding: var(--gap);
-
   display: grid;
   grid-template-columns: repeat(var(--num-cols), 1fr);
   grid-auto-rows: var(--row-height);
@@ -72,5 +69,4 @@ text-align: center;
     --num-cols: 2;
     --row-height: 30%;
   }
-
 }
