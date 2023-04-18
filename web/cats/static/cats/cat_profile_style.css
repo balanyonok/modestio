@@ -7,22 +7,21 @@ header {
   position: sticky;
   top:0px;
   text-align: center;
+  background-color: beige;
   justify-content: space-around;
-  display: flex;
-  background-color: white;
+  display: block;
 }
 
 header .navbar a {
   font-size: 1.4rem;
+  justify-content: space-around;
+  text-align: center;
   color: black;
   background-color: beige;
-  display: inline-block;
-  margin-top: 10px;
 }
 
 header .navbar a:hover {
   color: red;
-
 }
 
 header .logo {
@@ -30,15 +29,15 @@ header .logo {
 }
 
 header .logo > img {
-  width: 40%;
-  height: 40%;
+  width: 20%;
+  height: 20%;
 }
 
 /*Style for a page content: cat info and images*/
 h1 {
 text-align: center;
 color: black;
-margin-top: 300px;
+margin-top: 30px;
 }
 
 p {
