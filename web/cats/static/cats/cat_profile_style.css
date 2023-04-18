@@ -2,8 +2,8 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/*Style for a header*/
-header {
+/*Style for the header*/
+#the-headerest-header {
   position: sticky;
   top:0px;
   text-align: center;
@@ -12,7 +12,7 @@ header {
   display: block;
 }
 
-header .navbar a {
+#the-headerest-header .navbar a {
   font-size: 1.4rem;
   justify-content: space-around;
   text-align: center;
@@ -20,15 +20,15 @@ header .navbar a {
   background-color: beige;
 }
 
-header .navbar a:hover {
+#the-headerest-header .navbar a:hover {
   color: red;
 }
 
-header .logo {
+#the-headerest-header .logo {
   margin-top: 35px;
 }
 
-header .logo > img {
+#the-headerest-header .logo > img {
   width: 20%;
   height: 20%;
 }
