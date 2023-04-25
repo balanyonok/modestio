@@ -1,0 +1,84 @@
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Style for the header */
+#the-headerest-header {
+  position: sticky;
+  top:0px;
+  text-align: center;
+  background-color: beige;
+  justify-content: space-around;
+  display: block;
+}
+
+#the-headerest-header .navbar a {
+  font-size: 1.5rem;
+  padding: 0 1.4rem;
+  justify-content: space-around;
+  text-align: center;
+  color: black;
+  background-color: beige;
+}
+
+#the-headerest-header .navbar a:hover {
+  color: red;
+}
+
+#the-headerest-header .logo {
+  margin-top: 35px;
+}
+
+#the-headerest-header .logo > img {
+  width: 20%;
+  height: 20%;
+}
+
+/* Style for the footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  background-color: beige;
+  display: block;
+}
+
+/* Style for the page content: cat's info and images */
+h1 {
+text-align: center;
+color: black;
+margin-top: 30px;
+}
+
+p {
+text-align: center;
+}
+
+.image-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --rows-height: 400px;
+  --columns-width: 300px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--rows-height);
+  gap: var(--gap);
+  justify-content: space-around;
+  margin: 0 10% 0;
+}
+
+.image-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 30%;
+  }
+}

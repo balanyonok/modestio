@@ -1,15 +1,26 @@
-<h1>Cats for adoption</h1>
-{% if available_cats %}
-    <ul>
-    {% for cat in available_cats %}
-        <li>
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static '/cats/cats_for_adoption_style.css' %}">
+{% endblock %}
+
+{% block content%}
+  <h1>Cats for adoption</h1>
+  {% if available_cats %}
+    <div class="profiles-grid">
+      {% for cat in available_cats %}
+      <div class="profile">
+          {% with cat.images.first as photo %}
+            <img src="{{ photo.image.url }}">
+          {% endwith %}
+          <div class="info">
             <a href="{{ cat.get_absolute_url }}"><h2>{{ cat.name }}</a> ({{ cat.calculate_age }})</h2><br/>
-            {% with cat.images.first as photo %}
-            <img src="{{ photo.image.url }}"/>
-            {% endwith %}
-        </li>
-    {% endfor %}
-    </ul>
-{% else %}
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% else %}
     <p>Currently there aren't cats for adoption.</p>
-{% endif %}
+  {% endif %}
+{% endblock %}

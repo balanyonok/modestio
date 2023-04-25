@@ -1,15 +1,16 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block head %}<link rel="stylesheet" href="{% static '/cats/cat_profile_style.css' %}">{% endblock %}
+
 {% block content %}
   <h1>{{ cat.name }}</h1>
-
   <p><strong>Age:</strong> {{ cat.calculate_age }}</p>
   <p><strong>Sex:</strong> {{ cat.get_sex_display }}</p>
   <p><strong>Health:</strong> {{ cat.health_status }}</p>
-  <ul>
-  {% for photo in cat.images.all %}
-    <li>
-    <img src="{{ photo.image.url }}"/>
-    </li>
-  {% endfor %}
-  </ul>
-
+  <div class="image-grid">
+    {% for photo in cat.images.all %}
+      <img src="{{ photo.image.url }}">
+    {% endfor %}
+  </div>
 {% endblock %}
