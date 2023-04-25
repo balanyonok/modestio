@@ -3,19 +3,6 @@
 
 {% block head %}<link rel="stylesheet" href="{% static '/cats/cat_profile_style.css' %}">{% endblock %}
 
-{% block header %}
-  <header id="the-headerest-header">
-    <nav class="navbar">
-      <a href="contact">contact</a>
-      <a href="about">about</a>
-      <a href="donate">donate</a>
-    </nav>
-    <logo class="logo">
-      <img src="/media/web_modestio_logo.png">
-    </logo>
-  </header>
-{% endblock%}
-
 {% block content %}
   <h1>{{ cat.name }}</h1>
   <p><strong>Age:</strong> {{ cat.calculate_age }}</p>
